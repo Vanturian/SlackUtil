@@ -3,7 +3,6 @@ package me.vanture.slackutil;
 import me.vanture.slackutil.util.UtilSlack;
 
 import java.io.IOException;
-import java.util.logging.Level;
 
 /**
  * @author vanture
@@ -11,12 +10,16 @@ import java.util.logging.Level;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Level.INFO + "Attempting to send a message to Slack!");
+        log("Attempting to send a message to Slack!");
         try {
-            System.out.println(Level.INFO + " Message is transferred to Slack!");
+            log("Message is transferred to Slack!");
             UtilSlack.postMessage("bots", "I'm a really cool bot :D");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void log(String msg) {
+        System.out.println("[INFO] " + msg);
     }
 }
