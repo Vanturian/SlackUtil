@@ -11,7 +11,7 @@ import java.net.URL;
  */
 public class UtilSlack {
 
-    private static String ADDRESS = "https://hooks.slack.com/services/...";
+    private static String ADDRESS = "";
 
     public static void postMessage(String channel, String message) throws IOException {
 
